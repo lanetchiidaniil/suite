@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background-color: #332402;
+    color: rgb(255, 255, 255);
+}
+
+header {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(65, 80, 78);
+    padding: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    z-index: 5px;
+}
+
+h1 {
+    margin: 0px;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+}
+nav ul > *:not(:last-child){
+    margin-right: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav .dropdown {
+    display: none;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav .dropdown li {
+    display: block;
+}
+
+.content {
+    display: flex;
+    margin: 20px;
+}
+
+.wolf-image {
+    width: 720px;
+    height: 340px;
+}
+
+.text {
+    margin-left: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    margin: 9vh 1vh 3vh;
+}
+
+.wrapper img {
+    height: 400px;
+}
+
+p {
+    line-height: 1.25;
+    margin-bottom: 10px; 
+}
+
