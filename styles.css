@@ -5,13 +5,25 @@
 }
 
 body {
-    margin: 0;
-    font-family: 'Times New Roman', serif;
-    background-color: #8bddc9;
+    margin: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background-color: rgb(238 233 202);
+    font-size: 17px;
+    padding: 0;
 }
 
 section {
-    color: rgb(12, 12, 12);
+    color: rgb(0, 0, 0);
+    background-color: #f3edbb;
+    padding: 15px;
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid #070202;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;  
 }
 
 header {
@@ -19,7 +31,7 @@ header {
     left: 0px;
     position: fixed;
     width: 100%;
-    background-color: rgb(30, 37, 37);
+    background-color: rgb(42, 49, 49);
     padding: 5px;
     display: flex;
     align-content: center;
@@ -30,17 +42,22 @@ header {
 }
 
 h1 {
-    margin: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+    align-items: center;
+    justify-content: center;
 }
 nav{
     display: flex;
     align-items: center;
+    right: 5px;
 }
 nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 15px 30px;
+    font-size: 25px;    
 }
 
 nav ul li {
@@ -104,6 +121,38 @@ nav .dropdown li {
 
 p {
     line-height: 1.25;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; 
+    font-size: larger;
 }
 
+.three-columns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#about, #works, #links {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #3a97f5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .three-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 80%;
+        margin-bottom: 15px;
+    }
+}
