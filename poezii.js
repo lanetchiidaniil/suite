@@ -132,7 +132,8 @@ const poems = {
     
         container.dataset.offset = newOffset;
         container.innerHTML = allPoems
-            .slice(newOffset, newOffset + 3)
+            .slice(newOffset, newOffset + 3
+                )
             .map(poem => `<div class="poem">${poem.replace(/\n/g, '<br>')}</div>`)
             .join("");
     }
