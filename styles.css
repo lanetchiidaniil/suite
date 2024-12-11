@@ -7,7 +7,7 @@
 body {
     margin: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-    background-color: rgb(238 233 202);
+    background-color: rgb(181, 232, 252);
     font-size: 17px;
     padding: 0;
 }
@@ -177,5 +177,84 @@ footer a:hover {
     section {
         width: 80%;
         margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px; /* Немного уменьшить текст */
+        margin: 5px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav .dropdown {
+        position: static;
+        display: none;
+    }
+
+    nav ul li:hover .dropdown {
+        display: none; /* Убираем hover для мобильных */
+    }
+
+    /* Бургер-меню */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav.active ul {
+        display: flex; /* Показываем меню при активации */
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .three-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
     }
 }
