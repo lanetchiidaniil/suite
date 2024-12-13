@@ -1,3 +1,6 @@
-document.querySelector('.burger-menu').addEventListener('click', function () {
-    document.querySelector('nav').classList.toggle('active');
+
+const burder = document.querySelector('.burger-menu');
+const navbar = document.querySelector('.nav');
+burder.addEventListener('click', () => {
+    navbar.classList.toggle('active')
 });
