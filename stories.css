@@ -14,7 +14,9 @@ header {
     top: 0;
     left: 0;
     z-index: 10;
+    padding: 10px 25px;
 }
+
 .header__content{
     width: 95%;
     margin: 0 auto;
@@ -27,6 +29,7 @@ header {
 header h1 {
     margin: 0;
     text-align: left;
+    font-size: 24px;
 }
 
 nav {
@@ -60,4 +63,103 @@ h2 {
 
 main {
     margin: 50px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Стили секции рассказов */
+#stories {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стиль для рамки рассказа */
+.story-box {
+    display: flex;
+    border: 3px solid black;
+    background-color: #fdede3; 
+    width: 100%; /* Растягивается на всю ширину экрана */
+    max-width: 100%; /* Адаптация для больших экранов */
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Учитывает рамку и padding */
+    position: relative;
+}
+
+.story-number {
+    background-color: #333; 
+    color: rgb(148, 248, 243);
+    font-size: 20px; 
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px; 
+    text-align: center;
+    margin-right: 10px
+}
+
+.story-content {
+    flex: 1;
+}
+
+/* Текстовые стили */
+.story-content h2 {
+    margin: 0 0 10px;
+}
+
+.story-content p {
+    font-size: 16px; 
+    line-height: 1.4; 
+}
+
+.story-content .excerpt {
+    display: inline;
+}
+
+.story-content .full-text {
+    display: none;
+}
+
+/* Скрытие и показ текста через checkbox */
+input[type="checkbox"] {
+    display: none; /* Скрываем сам чекбокс */
+}
+
+input[type="checkbox"]:checked ~ .full-text {
+    display: inline; /* Показываем полный текст */
+}
+
+label {
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease-in-out; 
+}
+
+/* Стрелка по умолчанию (вниз) */
+label:before {
+    content: "▼"; 
+}
+
+/* Стрелка при развёрнутом тексте (вверх) */
+input[type="checkbox"]:checked + .full-text + label:before {
+    content: "▲";
 }

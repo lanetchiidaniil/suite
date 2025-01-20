@@ -56,7 +56,6 @@ main {
 .poem{
     max-height: 60vh;
     overflow-y: scroll;
-    background-color: #e6e6e6;
 }
 .poems .poem {
     flex: 1 1 33%;
@@ -73,7 +72,7 @@ main {
 }
 
 .scroll-button {
-    background-color: #63649b;
+    background-color: #02045a;
     color: rgb(255, 255, 255);
     border: 1px solid rgb(255, 255, 255);
     cursor: pointer;
@@ -81,10 +80,11 @@ main {
     margin-left: 0px;
     margin-right: 10px;
     height: 400px;
+    opacity: 0.2;
 }
 
 .scroll-button:hover {
-    background-color: rgb(127, 127, 167);
+    background-color: rgb(145, 143, 143);
 }
 
 h2 {
@@ -93,53 +93,11 @@ h2 {
     font-size: xx-large;
 
 }
-.poem__buttons{
-    display: none;
-}
+
 #poem-container {
     padding: 20px;
 }
 
 .poem-category {
     margin-bottom: 20px;
-}
-@media (max-width: 770px) {
-    ._main{
-        display: none;
-    }
-    .poem-container{
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-    }
-    .poem__buttons{
-        margin: 0 auto;
-        width: 80%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .poem__buttons .scroll-button{
-        height: 0px;
-        min-height: 30px;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .category{
-        width: 100%;
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .poem{
-        width: 85vw;
-        height: 50vh;
-        margin-bottom: 20px;
-    }
-    .poem-category{
-        margin-top: 0;
-    }
 }
