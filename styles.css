@@ -182,7 +182,7 @@ footer a:hover {
 
 @media (max-width: 768px) {
     body {
-        font-size: 15px; 
+        font-size: 15px; /* Немного уменьшить текст */
         margin: 5px;
     }
 
@@ -208,9 +208,10 @@ footer a:hover {
     }
 
     nav ul li:hover .dropdown {
-        display: none; 
+        display: none; /* Убираем hover для мобильных */
     }
 
+    /* Бургер-меню */
     nav {
         flex-direction: column;
         align-items: flex-start;
@@ -230,7 +231,7 @@ footer a:hover {
     }
 
     nav:active ul {
-        display: flex; 
+        display: flex; /* Показываем меню при активации */
     }
 
     .wrapper {
