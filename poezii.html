@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Стихи</title>
     <link rel="stylesheet" href="poezii.css">
 </head>
+
 <body>
-    <header class="navbar">
-        <span>Категория стихов:</span>
-        <a href="#love">Любовь</a>
-        <a href="#friends">Друзья</a>
-        <a href="#other">Другое</a>
-        <div class="right">
-            <a href="index.html">Главная</a>        
+    <nav class="navbar">
+        <div class="navbar-local-links">
+            <span>Категория стихов:</span>
+            <a href="#love">Любовь</a>
+            <a href="#friends">Друзья</a>
+            <a href="#other">Другое</a>
+        </div>
+        <div class="navbar-global-links">
+            <a href="index.html">Главная</a>
             <a href="#top">Начало</a>
         </div>
-    </header>
+    </nav>
     <main>
         <section id="love" class="category">
             <h2>Любовь</h2>
             <div class="poem-container">
-                <button class="scroll-button" onclick="scrollPoems('love', -1)">&#8678;</button>
                 <div class="poems" id="poems-love"></div>
-                <button class="scroll-button" onclick="scrollPoems('love', 1)">&#8680;</button>
+                <div class="poem-buttons">
+                    <button class="scroll-button" onclick="scrollPoems('love', -1)">&#8678;</button>
+                    <button class="scroll-button" onclick="scrollPoems('love', 1)">&#8680;</button>
+                </div>
             </div>
         </section>
         <section id="friends" class="category">
             <h2>Друзья</h2>
             <div class="poem-container">
-                <button class="scroll-button" onclick="scrollPoems('friends', -1)">&#8678;</button>
                 <div class="poems" id="poems-friends"></div>
-                <button class="scroll-button" onclick="scrollPoems('friends', 1)">&#8680;</button>
+                <div class="poem-buttons">
+                    <button class="scroll-button" onclick="scrollPoems('friends', -1)">&#8678;</button>
+                    <button class="scroll-button" onclick="scrollPoems('friends', 1)">&#8680;</button>
+                </div>
             </div>
         </section>
         <section id="other" class="category">
             <h2>Другое</h2>
             <div class="poem-container">
-                <button class="scroll-button" onclick="scrollPoems('other', -1)">&#8678;</button>
                 <div class="poems" id="poems-other"></div>
-                <button class="scroll-button" onclick="scrollPoems('other', 1)">&#8680;</button>
+                <div class="poem-buttons">
+                    <button class="scroll-button" onclick="scrollPoems('other', -1)">&#8678;</button>
+                    <button class="scroll-button" onclick="scrollPoems('other', 1)">&#8680;</button>
+                </div>
             </div>
         </section>
     </main>
     <script src="poezii.js"></script>
 </body>
+
 </html>
